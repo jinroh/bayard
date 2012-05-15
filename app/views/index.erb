@@ -1,23 +1,28 @@
 <html>
 <head>
-  <title><%= @data %></title>
+  <title><%= @main.title  %></title>
 </head>
 <body>
 <div id="main">
-<%- main = @data.main %>
-<h2><%= main.title %></h2>
+<h2><%= @main.title %></h2>
 <p>
-  <%= main.content %>
-  <img src="<%= main.image %>">
+  <%= @main.content %>
+  <img src="<%= @main.image %>">
 </p>
 </div>
 
 <div id="item">
-<% item = @data.item %>
-<h3><%= item.title %></h3>
+<h3><%= @item.title %></h3>
 <p>
-  <%= item.content %>
-  <img src="<%= item.image %>">
+  <%= @item.content %>
+  <img src="<%= @item.image %>">
 </p>
+</div>
+
+<div id="question">
+<p>
+  <%= @question %>
+</p>
+</div>
 </body>
 </html>

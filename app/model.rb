@@ -3,16 +3,16 @@ require "ostruct"
 
 class Model < OpenStruct
   
-  @@models = JSON.parse(File.read(FILE_NAME))
+  @@models = JSON.parse(File.read(DATA_FILE_NAME))
 
   def new_ostruct_member(name)
     name = name.to_sym
     unless self.respond_to?(name)
       class << self; self; end.class_eval do
-        define_method(name) {
+        define_method(name) do
           v = @table[name]
           v.is_a?(Hash) ? Model.new(v) : v
-        }
+        end
       end
     end
     name
