@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title><%= @data %></title>
+</head>
+<body>
+<div id="main">
+<%- main = @data.main %>
+<h2><%= main.title %></h2>
+<p>
+  <%= main.content %>
+  <img src="<%= main.image %>">
+</p>
+</div>
+
+<div id="item">
+<% item = @data.item %>
+<h3><%= item.title %></h3>
+<p>
+  <%= item.content %>
+  <img src="<%= item.image %>">
+</p>
+</body>
+</html>
