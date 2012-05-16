@@ -5,6 +5,15 @@ class Model < OpenStruct
   
   @@models = JSON.parse(File.read(DATA_FILE_NAME))
 
+  def initialize(data)
+    super(data)
+    @data = data
+  end
+
+  def to_json
+    @data.to_json
+  end
+
   def new_ostruct_member(name)
     name = name.to_sym
     unless self.respond_to?(name)

@@ -1,0 +1,21 @@
+- date: Mercredi 2 Mai
+  main:
+    title: La Grande Histoire
+    content: "Episode 2: ...."
+    image: foo.jpg
+  item:
+    title: L'expérience
+    image: bar.jpg
+    content: Ton avion supersonique
+  question: Pourquoi ...
+
+- date: Mercredi 3 Mai
+  main:
+    title: La Grande BD
+    content: "Episode 3: ...."
+    image: baz.jpg
+  item:
+    title: La recette
+    image: quz.jpg
+    content: Le gloubiboulga
+  question: Pourquoi ...

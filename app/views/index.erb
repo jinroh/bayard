@@ -1,28 +1,36 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title><%= @main.title  %></title>
-</head>
-<body>
-<div id="main">
-<h2><%= @main.title %></h2>
-<p>
-  <%= @main.content %>
-  <img src="<%= @main.image %>">
-</p>
-</div>
+  <head>
+    <title>Bayard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" media="screen" type="text/css" title="design" href="design.css" />
+  </head>
+    
+  <body>
+    <div class="header">
+    </div>
+    
+    <div id="top_storie" class="vignette">
+      <span id="title"><h1><%= @main.title %></h1></span>
+      <div id="illustration_top_storie"></div>
+      <div id="resume"><%= @main.content %></div>
+      <div class="pliage"></div>
+    </div>
 
-<div id="item">
-<h3><%= @item.title %></h3>
-<p>
-  <%= @item.content %>
-  <img src="<%= @item.image %>">
-</p>
-</div>
-
-<div id="question">
-<p>
-  <%= @question %>
-</p>
-</div>
-</body>
+    <div id="question" class="vignette">
+      <h2 class="title">La Question du Jour</h2>
+      <p><%= @question %></p>
+    </div>
+    
+    <div id="page" class="vignette">
+      <h2 class="title">Pratique</h2>
+      <p><%= @item.content %></p>
+    </div>
+    
+    <div id="bottom">
+      <div id="prev-button"></div>
+      <a href="index.html" class="date"><%= @date %></a>
+      <div id="next-button"></div>  
+    </div>
+  </body>
 </html>
